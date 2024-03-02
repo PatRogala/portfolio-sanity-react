@@ -1,9 +1,11 @@
-import React, { useState} from 'react'
-import { HiMenu, HiMenuAlt4, HiX } from 'react-icons/hi'
+import React, { useState } from 'react'
+import { HiMenuAlt4, HiX } from 'react-icons/hi'
 import { motion } from 'framer-motion'
 
 import { images } from '../../constants'
 import './Navbar.scss'
+
+const MENU_ITEMS = ['home', 'about', 'work', 'skills', 'contact']
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false)
@@ -11,10 +13,10 @@ const Navbar = () => {
   return (
     <nav className="app__navbar">
       <div className="app__navbar-logo">
-        <img src={images.logo} alt="logo" />
+        <img src={images.logo} alt="Personal logo" />
       </div>
       <ul className="app__navbar-links">
-        {['home', 'about', 'work', 'skills', 'contact'].map((item, index) => (
+        {MENU_ITEMS.map((item) => (
           <li className="app__flex p-text" key={`link-${item}`}>
             <div />
             <a href={`#${item}`}>{item}</a>
@@ -32,7 +34,7 @@ const Navbar = () => {
           >
             <HiX onClick={() => setToggle(false)} />
             <ul>
-              {['home', 'about', 'work', 'skills', 'contact'].map((item, index) => (
+              {MENU_ITEMS.map((item) => (
                 <li key={item}>
                   <a href={`#${item}`} onClick={() => setToggle(false)}>{item}</a>
                 </li>
