@@ -26,7 +26,7 @@ const Header = () => {
         <div className="app__header-badge">
           <div className="badge-cmp app__flex">
             <span>👋</span>
-            <div style={{marginLeft: 20}}>
+            <div className="ml">
               <p className="p-text">Hello, I am</p>
               <h1 className="head-text">Patrick</h1>
             </div>
@@ -44,12 +44,12 @@ const Header = () => {
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="app__header-img"
       >
-        <img src={images.profile} alt="profile_bg" />
+        <img src={images.profile} alt="Profile background" />
         <motion.img
           whileInView={{ scale: [0, 1]}}
           transition={{ duration: 1, ease: 'easeInOut' }}
           src={images.circle}
-          alt="profile_circle"
+          alt="Profile circle"
           className="overlay_circle"
         />
       </motion.div>
@@ -59,9 +59,9 @@ const Header = () => {
         whileInView={scaleVariants.whileInView}
         className="app__header-circles"
       >
-        {[images.rails, images.ruby, images.react].map((circle, index) => (
-          <div className="circle-cmp app__flex" key={`circle-${index}`}>
-            <img src={circle} alt="circle" />
+        {[images.rails, images.ruby, images.react].map((circle) => (
+          <div className="circle-cmp app__flex" key={circle}>
+            <img src={circle} alt="Technology logo" />
           </div>
         ))}
       </motion.div>
