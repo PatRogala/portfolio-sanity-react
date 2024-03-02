@@ -4,7 +4,7 @@ import api from '../assets/api.png';
 import cpp from '../assets/cpp.png';
 import css from '../assets/css.png';
 import figma from '../assets/figma.png';
-import flutter from '../assets/flutter.png';
+import rails from '../assets/rails.png';
 import git from '../assets/git.png';
 import graphql from '../assets/graphql.png';
 import html from '../assets/html.png';
@@ -13,7 +13,7 @@ import mu5 from '../assets/mu5.png';
 import node from '../assets/node.png';
 import python from '../assets/python.png';
 import react from '../assets/react.png';
-import redux from '../assets/redux.png';
+import ruby from '../assets/ruby.png';
 import sass from '../assets/sass.png';
 import typescript from '../assets/typescript.png';
 import vue from '../assets/vue.png';
@@ -42,7 +42,7 @@ const images = {
   cpp,
   css,
   figma,
-  flutter,
+  rails,
   git,
   graphql,
   html,
@@ -51,7 +51,7 @@ const images = {
   node,
   python,
   react,
-  redux,
+  ruby,
   sass,
   typescript,
   vue,
