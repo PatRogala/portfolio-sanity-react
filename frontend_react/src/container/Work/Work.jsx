@@ -20,6 +20,9 @@ const Work = () => {
         setWorks(data)
         setFilterWork(data)
       })
+      .catch((error) => {
+        console.error('Error fetching works:', error);
+      });
   }, [])
 
 
@@ -45,9 +48,9 @@ const Work = () => {
       </h2>
 
       <div className="app__work-filter">
-        {['UI/UX', 'Web App', 'Mobile App', 'React', 'All'].map((item, index) => (
+        {['UI/UX', 'Web App', 'Mobile App', 'React', 'All'].map((item) => (
           <div
-            key={index}
+            key={item}
             onClick={() => handleWorkFilter(item)}
             className={`app__work-filter-item app__flex p-text ${activeFilter === item ? 'item-active' : ''}`}
           >
@@ -61,8 +64,8 @@ const Work = () => {
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="app__work-portfolio"
       >
-        {filterWork.map((work, index) => (
-          <div className="app__work-item app__flex" key={index}>
+        {filterWork.map((work) => (
+          <div className="app__work-item app__flex" key={work._id}>
             <div className="app__work-img app__flex">
               <img src={urlFor(work.imgUrl)} alt={work.name} />
 
