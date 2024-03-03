@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { motion } from 'framer-motion'
 
 import { images } from '../../constants'
@@ -6,9 +6,9 @@ import './About.scss'
 
 const abouts = [
   { title: 'Web Development', description: 'I am a good web developer.', imgUrl: images.about01 },
-  { title: 'Web Design', description: 'I am a good web developer.', imgUrl: images.about02 },
-  { title: 'UI/UX', description: 'I am a good web developer.', imgUrl: images.about03 },
-  { title: 'Web Animations', description: 'I am a good web developer.', imgUrl: images.about04 },
+  { title: 'Web Design', description: 'I am a good web designer.', imgUrl: images.about02 },
+  { title: 'UI/UX', description: 'I am good at UI/UX.', imgUrl: images.about03 },
+  { title: 'Web Animations', description: 'I am good at web animations.', imgUrl: images.about04 },
 ]
 
 const About = () => {
@@ -19,17 +19,17 @@ const About = () => {
       </h2>
 
       <div className="app__profiles">
-        {abouts.map((about, index) => (
+        {abouts.map((about) => (
           <motion.div
             whileInView={{ opacity: 1 }}
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.5, type: 'tween' }}
             className="app__profile-item"
-            key={about.title + index}
+            key={about.title}
           >
             <img src={about.imgUrl} alt={about.title} />
-            <h2 className="bold-text" style={{ marginTop: 20 }}>{about.title}</h2>
-            <h2 className="p-text" style={{ marginTop: 10 }}>{about.description}</h2>
+            <h2 className="bold-text about-title">{about.title}</h2>
+            <h2 className="p-text about-description">{about.description}</h2>
           </motion.div>
         ))}
       </div>
