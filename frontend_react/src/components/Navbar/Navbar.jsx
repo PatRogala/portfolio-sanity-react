@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import { images } from '../../constants'
 import './Navbar.scss'
 
-const MENU_ITEMS = ['home', 'about', 'work', 'skills', 'contact']
+const MENU_ITEMS = ['home', 'about', 'work', 'skills', 'testimonials', 'contact']
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false)
