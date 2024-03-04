@@ -5,16 +5,24 @@ const SocialMedia = () => {
   return (
     <div className="app__social">
       <div>
-        <FaLinkedinIn />
+        <a href="https://www.linkedin.com/in/patrogala/" target="_blank" rel="noreferrer">
+          <FaLinkedinIn />
+        </a>
       </div>
       <div>
-        <FaMedium />
+        <a href="https://medium.com/@patrykrogedu" target="_blank" rel="noreferrer">
+          <FaMedium />
+        </a>
       </div>
       <div>
-        <FaGithub />
+        <a href="https://github.com/PatRogala" target="_blank" rel="noreferrer">
+          <FaGithub />
+        </a>
       </div>
       <div>
-        <FaWordpressSimple />
+        <a href="https://blog.patrykrogala.dev/" target="_blank" rel="noreferrer">
+          <FaWordpressSimple />
+        </a>
       </div>
     </div>
   )

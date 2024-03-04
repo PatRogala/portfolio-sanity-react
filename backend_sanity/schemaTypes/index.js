@@ -1,4 +1,3 @@
-import testimonials from "./testimonials";
 import aboutus from "./aboutus";
 import brands from "./brands";
 import contact from "./contact";
@@ -8,7 +7,6 @@ import workExperience from "./workExperience";
 import works from "./works";
 
 export const schemaTypes = [
-  testimonials,
   aboutus,
   brands,
   contact,

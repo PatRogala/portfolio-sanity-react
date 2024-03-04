@@ -1,6 +1,6 @@
 import React from 'react'
 
-const MENU_ITEMS = ['home', 'about', 'work', 'skills', 'testimonials', 'contact']
+const MENU_ITEMS = ['home', 'about', 'work', 'skills', 'contact']
 
 const NavigationDots = ({ active }) => {
   return (
